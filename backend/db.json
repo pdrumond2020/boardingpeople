@@ -1,0 +1,36 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Patricia Marques",
+      "occupation": "System Analyst",
+      "company": "Marlin"
+    },
+    {
+      "id": 2,
+      "name": "Jorge Luiz Silva",
+      "occupation": "Scrum Master",
+      "company": "Halliburton"
+    }
+  ],
+  "embark": [
+    {
+      "id": 1,
+      "employeeId": 1,
+      "shipmentStart": "2020-07-01T03:00:00.000Z",
+      "shipmentEnd": "2020-07-05T03:00:00.000Z"
+    },
+    {
+      "employeeId": 1,
+      "shipmentStart": "2020-07-13T03:00:00.000Z",
+      "shipmentEnd": "2020-07-16T03:00:00.000Z",
+      "id": 2
+    },
+    {
+      "employeeId": 3,
+      "shipmentStart": "2020-07-01T03:00:00.000Z",
+      "shipmentEnd": "2020-07-05T03:00:00.000Z",
+      "id": 3
+    }
+  ]
+}

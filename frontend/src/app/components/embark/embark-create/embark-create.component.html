@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-title>New Embark</mat-card-title>
+    <form [formGroup]="embarkForm" autocomplete="off" novalidate>
+        <mat-form-field appearance="fill">
+            <mat-label>Select an employee</mat-label>
+            <mat-select [(ngModel)]="embark.employeeId" name="employeeId" formControlName="employeeId">
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let employee of employees | async" [value]="employee.id">{{ employee.name }}</mat-option>
+            </mat-select>
+            <mat-error>End Shipment is required.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Start Shipment</mat-label>
+            <input [(ngModel)]="embark.shipmentStart" matInput [matDatepicker]="startDatePicker" name="shipmentStart" formControlName="shipmentStart" 
+            placeholder="Choose a start date for boarding">
+            <mat-error>Start Shipment is required.</mat-error>
+            <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #startDatePicker color="primary"></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>End Shipment</mat-label>
+            <input [(ngModel)]="embark.shipmentEnd" matInput [matDatepicker]="endDatePicker" name="shipmentEnd" formControlName="shipmentEnd" 
+            placeholder="Choose an end date for boarding">
+            <mat-error>End Shipment is required.</mat-error>
+            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #endDatePicker color="primary"></mat-datepicker>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="create(embarkForm.value)" [disabled]="!embarkForm.valid" color="primary">
+        Save
+    </button>     
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button> 
+</mat-card>
+

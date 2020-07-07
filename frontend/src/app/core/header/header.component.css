@@ -1,0 +1,14 @@
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+}
+
+.header .title-group {
+    padding-left: 30px;
+} 
+
+.header .title-group i {
+    padding-right: 7px;
+} 
