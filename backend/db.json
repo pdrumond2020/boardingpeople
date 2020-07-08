@@ -25,12 +25,6 @@
       "shipmentStart": "2020-07-13T03:00:00.000Z",
       "shipmentEnd": "2020-07-16T03:00:00.000Z",
       "id": 2
-    },
-    {
-      "employeeId": 3,
-      "shipmentStart": "2020-07-01T03:00:00.000Z",
-      "shipmentEnd": "2020-07-05T03:00:00.000Z",
-      "id": 3
     }
   ]
 }
